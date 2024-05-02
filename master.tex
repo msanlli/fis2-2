@@ -234,5 +234,147 @@ $$
 \text{Hopkinson's Law}\to \boxed{\phi \cdot R=NI=F}
 $$
 
+\setcounter{equation}{0}
+\stepcounter{prob}\vspace{2ex}\textbf{\textit{Prob.\thesection.\theprob: }}PB.12 Closed ring $r=0'2m,\,S=1\times10^{-4}m^{2},\,\mu_{r}=1000,\,N=500,\, I=2A$
+
+$\triangleright$ a) Magnetic Excitation
+\begin{align}
+&\begin{cases}
+\oint_{C}=\vec{H}d\vec{l}=I_{\text{inter}}=NI \\
+C=\oint_{C}Hdl\cos 0=H\oint_{C}dl=H2\pi r
+\end{cases}\implies  \\
+\implies H&=\frac{NI}{2\pi r}=\frac{500\cdot 2}{2\pi \cdot20\times 10\times^{-2}}=\boxed{795'7\,A /m}
+\end{align}
+$\triangleright$ b) Magnetic Field
+\begin{align}
+B=\mu H=\mu_{r}\mu_{o}H=1000\cdot4\pi \cdot 795'7=1\,T
+\end{align}
+
+$\triangleright$ c) Reluctance of the circuit
+\begin{align}
+R&=\frac{l}{\mu S}=\frac{2\pi r}{\mu_{r}\mu_{o}S}= \\
+&=\frac{2\pi \cdot 20\cdot 10^{-2}}{1000\cdot 4\pi \times 10^{-7}\cdot 10\times 10^{-4}}=\boxed{10^{6}\, H^{-1}}
+\end{align}
+
+$\triangleright$ d) Magnetic flux
+\begin{align}
+\phi&=\int _{S} \vec{B}\,d\vec{S}=\int _{S}B\,dS\cos_{0}\, = \\
+&=1\cdot 10 \times 10^{-4}=\boxed{ 1\, mWb}
+\end{align}
+$\triangleright$ e) Auto-induction Index
+\begin{align}
+L&=\frac{\mu_{\text{total}}}{I}=\frac{\mu N}{I}=\frac{1000\cdot 500}{2}=\boxed{0'25\,H}
+\end{align}
+
+A $2mm$ gap is created, maintaining the magnetic permeability.
+
+$\triangleright$ f) New Reluctance
+\begin{align}
+\oint_{C}\vec{H}d\vec{l}&=I\implies H_{\text{Fe}}\,l_{\text{Fe}}+H_{e}\,l_{e}=NI \\
+\phi&=B_{\text{Fe}}\, S_{\text{Fe}}=B_{e}\,S_{e} \implies B_{\text{Fe}}=B_{e} \implies \\
+\implies&\mu H_{\text{Fe}}=\mu_{o}H_{e}\implies H_{e}=\frac{\mu_{o}\mu_{r}}{\mu_{o}}H_{\text{Fe}}=1000H_{\text{Fe}} \\
+&\begin{cases}
+H_{\text{Fe}}\,l_{\text{Fe}}+H_{e}\,l_{e}=NI \\
+H_{e}=1000H_{\text{Fe}}
+\end{cases}
+\end{align}
+\begin{align}
+R'&=R_{\text{Fe}}+R_{e}=\frac{l-e}{\mu_{r}\mu_{o}S}+\frac{e}{\mu _{o}S}=\boxed{2589957'88\,H^{-1}}
+\end{align}
+
+$\triangleright$ g) New Flux
+\begin{align}
+\phi '=\frac{NI}{R_{eq}}=\boxed{3'87\times 10^{-4}\,Wb}
+\end{align}
+
+$\triangleright$ h) New Magnetic Field
+\begin{align}
+B'=\frac{\phi'}{S}=\boxed{0'387\,T}
+\end{align}
+
+\stepcounter{prob}\vspace{2ex}\textbf{\textit{Prob.\thesection.\theprob: }}PB.13 A circuit with two $5\times 10^{-4}m$ gaps, $S=50cm^{2},\,l=0'98m,\,\mu=400\mu_{o},\,N=1000$ 
+
+$\triangleright$ a) The intensity for $B=0,6\,T$
+\begin{align}
+\text{Hopkinson}\to NI&=R_{eq}\phi \\
+I&=\frac{R_{eq}\phi}{N} \\
+\phi&=B_{\text{Fe}}\,S_{\text{Fe}}=B_{e}\,S_{e} & S_{\text{Fe}}=S_{e}\implies B_{\text{Fe}}=B_{e}=0'6\,T \\
+&=0'6\cdot 50\times 10^{-4}=3\,mWb \\
+&\begin{cases}
+\phi=3\times 10^{-3}
+\end{cases}
+\end{align}
+\begin{align}
+R_{eq}&=R_{\text{Fe}}+2R_{e}=\frac{l_{\text{Fe}}}{\mu_{r}\mu_{o}S}+2 \frac{e}{\mu_{o}S}=\frac{1}{\mu_{o}S}\left[ \frac{l_{\text{Fe}}}{\mu_{r}}+2e \right]= \\
+&=\frac{1}{4\pi \times 10^{-7}\cdot 50\times 10^{-4}}\left[ \frac{98\times 10^{-2}}{400}+2\cdot 0'5\times 10^{-2} \right]= \\
+&=1981479'05\,H^{-1} \\
+&\begin{cases}
+\phi=3 \times 10^{-3} \\
+R_{eq}=1981479'05
+\end{cases}
+\end{align}
+\begin{align}
+I=\frac{R_{eq}\phi}{N}=\boxed{5'9\,A}
+\end{align}
+
+$\triangleright$ b) Magnetic Excitation between metal and gap
+\begin{align}
+B_{\text{Fe}}&=B_{e}\implies \mu_{r}\mu_{o}H_{\text{Fe}}=\mu_{o}H_{e}\implies H_{\text{Fe}}=\frac{H_{e}}{\mu_{r}} \\
+H_{\text{Fe}}&=\frac{H_{e}}{400}=\boxed{1193'7\,A / m}
+\end{align}
+
+$\triangleright$ c) Auto-induction Index
+\begin{align}
+L&=\frac{N^{2}}{R_{eq}}=\frac{1000^{2}}{1981479'05}=\boxed{0'504\,H}
+\end{align}
+
+\textbf{\textit{PB.7}}
+
+\section{Maxwell's Equations}
+
+\setcounter{equation}{0}
+\subsection{Previous Concepts}
+\setcounter{equation}{0}
+The Nabla operator is described as
+$$
+\vec{\nabla}=\frac{\partial}{\partial x}\mathbf{i}+\frac{\partial}{\partial y}\mathbf{j}+\frac{\partial}{\partial z}\mathbf{k}
+$$
+now, a field can be scalar or vector. If Nabla acts on a \textit{scalar field} ($\vec{\nabla}\cdot f)$, it is called a \textbf{\textit{gradient}}; on a \textit{vector field} simple relation ($\vec{\nabla}\cdot\vec{f}$), it is called \textit{\textbf{divergence}}, and for a vector relation ($\vec{\nabla}\times \vec{f}$), \textit{\textbf{rotational}}.
+
+\stepcounter{ex}\vspace{2ex}\textbf{\textit{Ex.\thesection.\theex: }}Calculate $\vec{\nabla}\vec{A}$ on point $P(1,-1,0)$ for $\vec{A}=x^{2}z\mathbf{i}-2y^{3}z^{2}\mathbf{j}+x^{2}y^{2}z\mathbf{k}$
+\begin{align}
+\text{div}\vec{A}=\vec{\nabla}\vec{A}&=\left(\frac{\partial}{\partial x}\mathbf{i}+\frac{\partial}{\partial y}\mathbf{j}+\frac{\partial}{\partial z}\mathbf{k}\right)\cdot [x^{2}z\mathbf{i}-2y^{3}z^{2}\mathbf{j}+x^{2}y^{2}z\mathbf{k}]= \\
+&=\frac{\partial}{\partial x}(x^{2}z)+\frac{\partial}{\partial y}(2y^{3}z^{2})+\frac{\partial}{\partial z}(x^{2}y^{2}z)= \\
+&=2xz+6y^{2}z^{2}+x^{2}y^{2}
+\end{align}
+$$
+\Vec{\nabla}\Vec{A}=2xz+6y^{2}z^{2}+x^{2}y^{2},\,\forall(x,y,z)
+$$
+\begin{align}
+[\vec{\nabla}\vec{A}]_{P}=2\cdot 1\cdot 0-6\cdot (-1)^{2}\cdot 0+1^{2}\cdot (-1)^{2}=\boxed{1}
+\end{align}
+
+\stepcounter{ex}\vspace{2ex}\textbf{\textit{Ex.\thesection.\theex: }}Calculate $\vec{\nabla}\times \vec{A}$ on point $P(1,-1,1)$ for $\vec{A}=xz^{3}\mathbf{i}-2x^{2}yz\mathbf{j}+2yz^{4}\mathbf{k}$
+\begin{align}
+\text{rot}\vec{A}=\vec{\nabla}\times \vec{A}&=\begin{array}{|ccc|}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+A_{x} & A_{y} & A_{z}
+\end{array}= \\
+&=\frac{\partial A_{z}}{\partial y}\mathbf{i}+\frac{\partial A_{x}}{\partial z}\mathbf{j}+\frac{\partial A_{y}}{\partial x}\mathbf{k}-\frac{\partial A_{x}}{\partial y}\mathbf{k}-\frac{\partial A_{y}}{\partial z}\mathbf{i}-\frac{\partial A_{z}}{\partial x}\mathbf{j}= \\
+&=2xyz+3xz^2+y^3z^2-xz^3-4y^3z-2xy^2
+\end{align}
+$$
+\Vec{\nabla}\times\Vec{A}=2xyz+3xz^2+y^3z^2-xz^3-4y^3z-2xy^2,\,\forall(x,y,z)
+$$
+\begin{align}
+    [\Vec{\nabla}\times\Vec{A}]_P=-2+3-1-1+4-2=\boxed{1}
+\end{align}
+
+The Laplacian is the squared of a Nabla operator
+$$
+\Delta=\vec{\nabla}\cdot \vec{\nabla}=\vec{\nabla}^{2}=\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}
+$$
+
 
 \end{document}
