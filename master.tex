@@ -330,6 +330,47 @@ L&=\frac{N^{2}}{R_{eq}}=\frac{1000^{2}}{1981479'05}=\boxed{0'504\,H}
 
 \textbf{\textit{PB.7}}
 
+\setcounter{equation}{0}
+\stepcounter{prob}\vspace{2ex}\textbf{\textit{Prob.\thesection.\theprob: }}PB.7 Two parallel conductors of infinite length on the $XY$ plane are $16cm$ away from each other and are equally distanced from the centre $(0,0,0)$. Both are charged with $5A$ and the exterior is a magnetic material of permeability $\mu_{r}=500$. The point $P$'s coordinates are $(0,8,0)$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.33\textwidth]{IMG/pb7.png}
+    \caption{Exercise 7}
+    \label{fig:pb7}
+\end{figure}
+
+I will be calling the conductors $1,\,2$ from $-x$ to $+x$.
+
+$\triangleright$ a) Magnetic Excitation at point $P$
+\begin{align}
+\overline{IP}&=\sqrt{ 8^{2}+8^{2} }\approx 11'3137cm=0'113137m \\
+\oint_{C}\vec{H}d\vec{l}&=NI\implies H\oint dl\cdot \cos 0=I\implies H=\frac{I}{2\pi r} \\
+H_{P}&=-H_{1x}+H_{1y}-H_{2x}-H_{2y}=-H_{1x}-H_{2x}= \\
+&=\langle H_{1x}=H_{2x} \rangle=2 \frac{5}{2\pi r}\cos 45=-\frac{5}{\pi r}\cos 45 \mathbf{i}
+\end{align}
+$$
+\boxed{H_{P}\approx-9'947\mathbf{i}\,A / m}
+$$
+
+$\triangleright$ b) Magnetic field at P
+\begin{align}
+B=\mu H & =\mu_{o}\mu_{r}H=4\pi\times 10^{-7}\cdot 500\cdot (-9'947)\approx-0'00625
+\end{align}
+$$
+\boxed{B_{P}=-6'25\Vec{\textbf{i}}\,mT}
+$$
+
+$\triangleright$ c) Flux at $O(0,0,0)$
+\begin{align}
+\Vec{B}_O=\Vec{B}_{1}+\Vec{B}_{2}
+\end{align}
+As the conductors' are at the same distance from $O$, the fields will cancel out like so
+$$
+\boxed{B_O=\Vec{0}\,T}
+$$
+
+
 \section{Maxwell's Equations}
 
 \setcounter{equation}{0}
@@ -364,17 +405,152 @@ A_{x} & A_{y} & A_{z}
 &=\frac{\partial A_{z}}{\partial y}\mathbf{i}+\frac{\partial A_{x}}{\partial z}\mathbf{j}+\frac{\partial A_{y}}{\partial x}\mathbf{k}-\frac{\partial A_{x}}{\partial y}\mathbf{k}-\frac{\partial A_{y}}{\partial z}\mathbf{i}-\frac{\partial A_{z}}{\partial x}\mathbf{j}= \\
 &=2xyz+3xz^2+y^3z^2-xz^3-4y^3z-2xy^2
 \end{align}
-$$
-\Vec{\nabla}\times\Vec{A}=2xyz+3xz^2+y^3z^2-xz^3-4y^3z-2xy^2,\,\forall(x,y,z)
-$$
-\begin{align}
-    [\Vec{\nabla}\times\Vec{A}]_P=-2+3-1-1+4-2=\boxed{1}
-\end{align}
 
 The Laplacian is the squared of a Nabla operator
 $$
 \Delta=\vec{\nabla}\cdot \vec{\nabla}=\vec{\nabla}^{2}=\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}
 $$
+
+\setcounter{equation}{0}
+\subsection{Divergence Theorem}
+\setcounter{equation}{0}
+The divergence measures the field generation in a volume
+$$
+\vec{\nabla}\vec{E}=\lim_{ \Delta V \to 0 } \left[ \frac{1}{\Delta V}\iint_{\Delta S}\vec{E}\,d\vec{S} \right]=\frac{d\Phi}{dV}
+$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.33\textwidth]{IMG/div.png}
+    \caption{Divergence representation}
+    \label{fig:div}
+\end{figure}
+
+\subsubsection{Second Maxwell Equation}
+\setcounter{equation}{0}
+If we measure a field $\vec{B}$, there won't be any generator in it, so its divergence is null
+$$
+\boxed{\vec{\nabla}\vec{B}=0}
+$$
+and the flux through a closed section is also null
+$$
+\Phi=\int _{S_c} \vec{B}\,d\vec{S} \,=\int _{v} \vec{\nabla}\vec{B}\, dv\, =0
+$$
+it is logical to see that if $\vec{\nabla}\vec{f}=0$, then the field has a conservative flux, this is called a \textit{solenoidal} field. If $\vec{\nabla}\vec{f}\neq 0$, then the field is a generator, if positive, an emitter and, if negative, a receiver.
+
+\stepcounter{ex}\vspace{2ex}\textbf{\textit{Ex.\thesection.\theex: }}Flux in the field 
+
+$\triangleright$ a) $\vec{E}=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}$ 
+\begin{align}
+\Phi&=\oint_{S}\vec{E}\,d\vec{S}=\int _{v}\vec{\nabla}\vec{E} \, dv\,  \\
+\vec{\nabla}\vec{E}&=\left( \frac{\partial}{\partial x}+\frac{\partial}{\partial y}+\frac{\partial}{\partial z} \right)(x\mathbf{i}+y\mathbf{j}+z\mathbf{k})=3 \\
+\Phi&=3\oint_{S}d\vec{S}=3a^{3}
+\end{align}
+$$
+\boxed{\Phi=3a^{3}}
+$$
+
+$\triangleright$ b) Sphere $R=r$
+\begin{align}
+\Phi&=\oint_{S}\vec{E}\,d\vec{S}=\frac{q}{\varepsilon_{o}}= \\
+&=\int _{v}\rho \, dv\, =\frac{\int _{v}\rho \, dv\, }{\varepsilon_{o}}
+\end{align}
+\subsubsection{First Maxwell Equation}
+\setcounter{equation}{0}
+\begin{align}
+\begin{cases}
+\Phi=\oint_{S}\vec{E}\,d\vec{S}=\int _{v}\vec{\nabla}\vec{E} \, dv\, \\
+\Phi=\oint_{S}\vec{E}\,d\vec{S}=\int _{v}\rho \, dv\, =\frac{\int _{v}\rho \, dv\,}{\varepsilon_{o}}
+\end{cases}\implies \boxed{\vec{\nabla}\vec{E}=\frac{\rho}{\varepsilon_{o}}}
+\end{align}
+
+\stepcounter{ex}\vspace{2ex}\textbf{\textit{Ex.\thesection.\theex: }}Let the vector field be $\vec{F}=x^{3}\mathbf{i}+y^{3}\mathbf{j}+xy\mathbf{k},\,P(X_{P},Y_{P},Z_{P})$ 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{IMG/c1_rec_2020.png}
+    \caption{}
+    \label{fig:c1_rec_2020}
+\end{figure}
+
+$\triangleright$ a) $[\text{rot}(\mathbf{F})]_{x}$ 
+\begin{align}
+[\vec{\nabla}\times \vec{F}]_{x}&=\begin{array}{|ccc|}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\partial x & \partial y & \partial z \\
+x^{3} & y^{3} & xy
+\end{array}=\partial_{y}(xy)-\partial_{z}(y^{3})=x\mathbf{i}
+\end{align}
+$$
+\boxed{[\vec{\nabla}\times \vec{F}]_{x_{P}}=X_{P}\,[V / m^{2}]}
+$$
+
+$\triangleright$ b) $\text{div}\mathbf{F}$
+\begin{align}
+\vec{\nabla}\vec{F}=\partial_{x}(x^{3})+\partial_{y}(y^{3})+\partial_{z}(xy)=3x^{2}+3y^{2}+0
+\end{align}
+$$
+\boxed{[\vec{\nabla}\vec{F}]_{P}=3(X_{P}^{2}+Y_{P}^{2})\,[V / m^{2}]}
+$$
+
+$\triangleright$ c) Flux $\Phi_{\mathbf{F}}$ through the cylinder
+\begin{align}
+\Phi&=\int _{v}\vec{\nabla}\vec{F} \, dv\, =\int _{v}3(\overbrace{X_{P}^{2}+Y_{P}^{2}}^{r^{2}}) \, dv\,= \\
+&& \implies(1)&=\iiint_{3}3(X_{P}^{2}+Y_{P}^{2})\,dx\,dy\,dz \\
+&&\implies(2)&=\langle dv=dS\cdot h=2\pi rh\,dr\rangle = \\
+&&&=\int_{0}^{R} 3r^{2}\cdot 2\pi rh \, dr\, = \\
+&&&=6\pi h \frac{R^{4}}{4}=\boxed{\frac{3\pi r^{4}h}{2}\,[Vm]}
+\end{align}
+
+\subsection{Rotational Theorem}
+\setcounter{equation}{0}
+The rotational measures the circulation over surface unit
+$$
+\text{rot}\vec{A}\cdot d\vec{S}=\oint\vec{A}\,d\vec{l}=dC
+$$
+\subsubsection{Stokes' Theorem}
+\setcounter{equation}{0}
+\begin{align}
+\text{rot}\vec{A}&=\frac{dC}{dS} &\Leftarrow \text{Stokes T. } \to C&=\oint_{C}\vec{A}\,d\vec{l}=\int _{S}(\vec{\nabla}\vec{A}) \, d\vec{S}\, 
+\end{align}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.33\textwidth]{IMG/rot.png}
+    \caption{Rotational representation}
+    \label{fig:rot}
+\end{figure}
+
+for a conservative field $\vec{\nabla}\times\vec{A}=0 \iff C=0$.
+
+\stepcounter{ex}\vspace{2ex}\textbf{\textit{Ex.\thesection.\theex: }}Let the field be $\mathbf{F}=-y^{3}\mathbf{i}+x^{3}\mathbf{j}+z^{3}\mathbf{k}$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.33\textwidth]{IMG/c1_2020.png}
+    \caption{}
+    \label{fig:c1_2020}
+\end{figure}
+
+$\triangleright$ a)
+\begin{align}
+\vec{\nabla}\vec{F}
+\end{align}
+
+$\triangleright$ b)
+\begin{align}
+\vec{\nabla}\times \vec{F}&=\begin{array}{|ccc|} 
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\partial x & \partial y & \partial z \\
+-y^{3} & x^{3} & z^{3}
+\end{array} =\partial_{x}(x^{3})\mathbf{k}+\partial_{y}(y^{3})\mathbf{k}=\boxed{3(x^{3}+y^{3})\mathbf{k}}
+\end{align}
+
+$\triangleright$ c) Circulation $C_{\mathbf{F}}$ the circumference of $R=r$
+\begin{align}
+C&=\oint_{C}\vec{F}\,d\vec{l}=\int _{S}(\vec{\nabla}\times \vec{F}) \, d\vec{S}\,=\int_{0}^{R} 3r^{2}\cdot 2\pi r \, dr\,= \\
+&=6\pi \frac{R^{4}}{4}=\boxed{\frac{3}{2}\pi r^{4} } 
+\end{align}
 
 
 \end{document}
