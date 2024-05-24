@@ -552,5 +552,153 @@ C&=\oint_{C}\vec{F}\,d\vec{l}=\int _{S}(\vec{\nabla}\times \vec{F}) \, d\vec{S}\
 &=6\pi \frac{R^{4}}{4}=\boxed{\frac{3}{2}\pi r^{4} } 
 \end{align}
 
+\section{Waves}
+
+\setcounter{equation}{0}
+\subsection{Standing Wave}
+\setcounter{equation}{0}
+Interference of two same-frequency harmonic waves propagating in the opposite direction
+$$
+\begin{cases}
+u_{1}=A\cos(kx-\omega t) \\
+u_{2}=A\cos(kx-\omega t)
+\end{cases}
+$$
+
+$$
+u(x,t)=2A\cos kx\cos \omega t
+$$
+
+The nodes are described by
+$$
+x=(2n+1)\frac{\lambda}{4}
+$$
+the antinodes by
+$$
+x=n \frac{\lambda}{2}
+$$
+\begin{align*}
+kx&=\pi\left( \frac{1}{2}+n \right) \\
+\frac{2\pi}{\lambda}x&=\pi\left( \frac{1}{2}+n \right) \\
+x&= \frac{\lambda}{2}\left( \frac{1}{2}+n \right)=\frac{\lambda}{4}\left( \frac{1}{2+n} \right)
+\end{align*}
+so the maxima $=\pm 1$ and the minima $=\pm 1+n\pi$.
+
+\stepcounter{prob}\vspace{2ex}\textbf{\textit{Prob.\thesection.\theprob: }}A fixed cord has a standing wave of equation $y(x,t)=2A\cos 5x\cos 1000t$ where $\lambda=1'256\,m,\,f=159'15\,Hz,\,v=200\,m /s$.
+
+\begin{align}
+k & =5=\frac{2\pi}{\lambda} & \to\lambda & =\frac{2\pi}{5}=\boxed{1'256\,m} \\
+\omega & =1000=\frac{2\pi}{T}=2\pi f & \to f & =\boxed{\frac{1000}{2\pi}\cdot 159'15\,Hz} \\
+v & =\frac{\omega}{k}=\frac{1000}{5}=\boxed{200\,m / s}
+\end{align}
+
+\subsection{Beats}
+\setcounter{equation}{0}
+Interference of two harmonic waves with similar frequencies and the same direction.
+$$
+u=2A\cos(\Delta kx-\Delta \omega t)\cos(kx-\omega t)
+$$
+$$
+u(x,t)=2A\cos\left[ \frac{k_{1}+k_{2}}{2}x-\frac{\omega_{1}+\omega_{2}}{2}t \right]\cos\left[ \frac{k_{1}-k_{2}}{2}x-\frac{\omega_{1}-\omega_{2}}{2}t \right]
+$$
+that propagates by $\frac{\Delta \omega}{\Delta k},\, \frac{w}{k}$ if they are equal, there is no dispersion.
+
+\subsection{Two Point Sources}
+\setcounter{equation}{0}
+Interference of two harmonic sources of the same frequency.
+
+\subsubsection{Young's Experiment}
+\setcounter{equation}{0}
+Following Hughes' experiment, the diffraction created by a wave on a hole of diameter half or less the wave's wavelength changes to expand spherically from the diffractor. If we place two diffractors there will be an interference between them.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{IMG/young.png}
+    \caption{Young's experiment representation}
+    \label{fig:young}
+\end{figure}
+
+The interference is denoted by
+$$
+\begin{cases}
+u_{1}=A_{1}\cos(kr_{1}-\omega t) \\
+u_{2}=A_{2}\cos(kr_{2}-\omega t)
+\end{cases}\hspace{4ex}\to u_{p}=u_{1}+u_{2}
+$$
+written in complex notation
+$$
+\begin{cases}
+\mathbf{u_{1}}=A_{1}\cdot e^{ j(kr_{1}-\omega t) } \\
+\mathbf{u_{2}}=A_{2}\cdot e^{ j(kr_{2}-\omega t) }
+\end{cases}\hspace{4ex}\to \mathbf{u_{p}}=\mathbf{A}\cdot e^{ -j\omega t }
+$$
+where
+$$
+\mathbf{A}=A_{1}\theta_{1}+A_{2}\theta_{2}=A_{1}(\cos \theta_{1}+j\cos \theta_{2})+A_{2}(\cos \theta_{2}+j\sin \theta_{2})
+$$
+$$
+A^{2}=(A_{1}\cos \theta_{1}+A_{2}\cos \theta_{2})^{2}+(A_{1}\sin \theta_{1}+A_{2}\sin \theta_{2})^{2}
+$$
+$$
+\boxed{A=\sqrt{ A_{1}^{2}+A_{2}^{2}+2A_{1}A_{2}\cos \theta }}
+$$
+the maxima would be 
+$$\cos \phi=1,\,\phi=0,1,2,\dots$$
+and the minima
+$$
+\cos \phi=-1,\,\phi=(2n+1)\pi
+$$
+
+\note{$\phi=k\,\Delta r=\frac{2\pi}{\lambda}(r_{2}-r_{1})$}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.33\textwidth]{IMG/theta.png}
+    \caption{}
+    \label{fig:theta}
+\end{figure}
+
+$$
+\begin{cases}
+r_{2}-r_{1}=n\lambda \\
+r_{2}-r_{1}=d\cdot \sin \theta
+\end{cases}\hspace{4ex}\to\,\boxed{\sin \theta=\frac{r_{2}-r_{1}}{d}\,,\, n=0,1,2,\dots}
+$$
+for the maxima $\langle \phi=2\pi n \rangle$ 
+$$
+\sin \theta=\frac{n\lambda}{d}\leq 1\implies n\leq \frac{d}{\lambda}
+$$
+the minima $\langle \phi=(2n+1)\pi \rangle$
+$$
+\sin \theta=\frac{2n+1}{2} \frac{\lambda}{d}\leq 1\implies \frac{n<d}{\lambda}-\frac{1}{2}
+$$
+
+\note{The maxima will always round up $$n=7'1\equiv 8$$as $n$ is the interference order, and the maximums are always the round-up of $n$.}
+
+\newpage
+\stepcounter{ex}\vspace{2ex}\textbf{\textit{Ex.\thesection.\theex: }}PB.12 Two speakers $d$ meters away from each other emit with the same frequency $f$ at a distance $D$ from a screen.
+
+$\triangleright$ a) For $d=30\,cm,\, f=10\,kHz,\, D=30\,cm$; obtain $\theta$ 
+
+For the maxima
+\begin{align}
+\sin \theta&=\frac{r_{2}-r_{1}}{d}=\frac{n\lambda}{d} & \theta & =\arcsin\left( \frac{n\lambda}{d} \right)=\arcsin(0'113n) \\
+\sin \theta & =\frac{n\lambda}{d}\leq 1 & n & \leq \frac{d}{\lambda}=\frac{30\times 10^{-2}}{34\times 10^{-3}}=8'82
+\end{align}
+$$
+\boxed{n=0,1,2,3,4,5,6,7,8}\hspace{4ex}\boxed{9\text{ maximums}}
+$$
+For the minima
+\begin{align}
+\begin{cases}
+(r_{2}-r_{1})=\frac{n+1}{2}\lambda \\
+\sin \theta=\frac{r_{2}-r_{1}}{d}
+\end{cases}\hspace{4ex}\to \sin \theta & =\frac{(2n+1)}{2} \frac{\lambda}{d} & \theta&=\arcsin(0'056(2n+1)) \\
+\sin \theta & =\frac{(2n+1)}{2} \frac{\lambda}{d}\leq 1 & n & \leq \frac{d}{\lambda}-\frac{1}{2}=8'32
+\end{align}
+$$
+\boxed{n=0,1,2,3,4,5,6,7,8}\hspace{4ex}\boxed{9\text{ minimums}}
+$$
+
 
 \end{document}
